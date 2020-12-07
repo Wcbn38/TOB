@@ -26,13 +26,21 @@ bot.on("message", message => {
         var s_message = message.content;
         var s_newMessage = s_message;
         
-        var lengh = s_message.lengh;
+        var lengh = 0
+        
+        while ( s_message[lengh] != 0 )
+        {
+            lengh++;
+        }
+        
         console.log(lengh);
+        
         for ( var i = 0; i < lengh; i++)
         {
             s_newMessage[i] = s_message[lengh - i - 1];
             console.log(s_message[lengh - i - 1]);
         }
+        
         message.edit(s_newMessage);
         console.log(s_message);
         console.log(s_newMessage);
