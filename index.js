@@ -3,7 +3,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const adminChannel = process.env.adminChannel
+const adminChannel = process.env.adminChannel;
 
 var http = require("http");
 setInterval(function () {
@@ -21,12 +21,16 @@ bot.on("ready", channels => {
 })
 
 bot.on("message", message => {
-
+    var s_message = new String();
+    var s_newMessage = new String();
+    var lengh = 0;
+    s_message = message.content;
+    lengh = s_message.lengh;
+    for ( let i = 0; i < lengh; i++)
+    {
+        s_newMessage[i] = s_message[lengh - i - 1];
+    }
+    message.edit(s_newMessage);
 })
-
-bot.on("channelCreate", channel => {
-
-})
-
 
 bot.login(process.env.TOKEN);
