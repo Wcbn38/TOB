@@ -33,6 +33,7 @@ bot.on("message", message => {
             s_newMessage[i] = s_message[lengh - i - 1];
         }
         message.edit(s_newMessage);
+        console.log(s_message);
         console.log(s_newMessage);
     }
 })
