@@ -11,6 +11,7 @@ setInterval(function () {
 }, 900000)
 
 bot.on("ready", channels => {
+  console.log(channels)
   bot.channels.get(adminChannel).send(`Bot started.`)
 })
 
