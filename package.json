@@ -1,1 +1,15 @@
-
+{
+  "name": "TOB",
+  "version": "1.0.0",
+  "description": "TOB",
+  "main": "app.js",
+  "author": {
+    "name": "Wcbn"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.87"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
