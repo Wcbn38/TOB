@@ -23,10 +23,8 @@ bot.on("ready", channels => {
 bot.on("message", message => {
     if ( message.member.id !== bot.user.id )
     {
-        var s_message = new String();
-        s_message = message.content;
-        
-        var s_newMessage = new String(s_message);
+        var s_message = message.content;
+        var s_newMessage = s_message;
         var lengh = 0;
         
         lengh = s_message.lengh;
