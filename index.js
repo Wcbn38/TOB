@@ -37,7 +37,7 @@ bot.on("message", message => {
         }
         
         try{
-            message.channel.send(`${message.author.username} ${s_newMessage}`);
+            message.channel.send(`**${message.author.username}** ${s_newMessage}`);
         }
         catch(error){
             console.log(error);
