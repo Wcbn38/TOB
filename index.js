@@ -28,12 +28,9 @@ bot.on("message", message => {
         
         var lengh = message.content.length;
         
-        console.log(lengh);
-        
         for ( var i = 0; i < lengh; i++)
         {
             s_newMessage +=  s_message.charAt(lengh - i - 1);
-            console.log(s_message.charAt(lengh - i - 1));
         }
         
         message.delete();
