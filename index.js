@@ -36,15 +36,14 @@ bot.on("message", message => {
             console.log(s_message.charAt(lengh - i - 1));
         }
         
+        message.delete();
+        
         try{
             message.channel.send(`**${message.author.username}** ${s_newMessage}`);
         }
         catch(error){
             console.log(error);
         }
-        //message.edit(s_newMessage);
-        console.log(s_message);
-        console.log(s_newMessage);
     }
 })
 
