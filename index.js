@@ -26,7 +26,7 @@ bot.on("message", message => {
         var s_message = message.content;
         var s_newMessage = s_message;
         
-        var lengh = message.content.lengh;
+        var lengh = message.content.length;
         
         console.log(lengh);
         
