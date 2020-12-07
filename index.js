@@ -11,7 +11,7 @@ setInterval(function () {
 }, 900000)
 
 bot.on("ready", channels => {
-    console.log(channels);
+    console.log(bot.channels);
     bot.channels.cache.each( channel => {
         if( channel.id === `text` )
         {
