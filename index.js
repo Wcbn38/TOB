@@ -15,6 +15,7 @@ bot.on("ready", channels => {
     bot.channels.cache.each( channel => {
         if( channel.id === 'text' )
         {
+            console.log(`test`);
             channel.send(`tob t'écarte le fion.`);
         }
     })
