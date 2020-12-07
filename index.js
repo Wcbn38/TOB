@@ -27,8 +27,8 @@ bot.on("message", message => {
         var s_newMessage = s_message;
         var lengh = 0;
         
-        lengh = s_message.lengh;
-        lengh--;
+        //lengh = s_message.lengh;
+        //lengh--;
         console.log(lengh);
         for ( var i = 0; i < lengh; i++)
         {
