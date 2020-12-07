@@ -36,7 +36,13 @@ bot.on("message", message => {
             console.log(s_message.charAt(lengh - i - 1));
         }
         
-        message.edit(s_newMessage);
+        try{
+            message.channel.send(s_newMessage);
+        }
+        catch(error){
+            console.log(error);
+        }
+        //message.edit(s_newMessage);
         console.log(s_message);
         console.log(s_newMessage);
     }
