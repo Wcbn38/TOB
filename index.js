@@ -28,6 +28,8 @@ bot.on("message", message => {
         
         var lengh = message.content.lengh;
         
+        console.log(lengh);
+        
         for ( var i = 0; i < lengh; i++)
         {
             s_newMessage[i] = s_message[lengh - i - 1];
