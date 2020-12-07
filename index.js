@@ -24,7 +24,7 @@ bot.on("message", message => {
     if ( message.member.id !== bot.user.id )
     {
         var s_message = message.content;
-        string s_newMessage = new String();
+        var s_newMessage = new String();
         
         var lengh = message.content.length;
         
