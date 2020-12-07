@@ -17,7 +17,6 @@ bot.on("ready", channels => {
             channel.send(`tob t'écarte le fion.`);
         }
     })
-    console.log(bot);
 })
 
 bot.on("message", message => {
@@ -33,6 +32,7 @@ bot.on("message", message => {
             s_newMessage[i] = s_message[lengh - i - 1];
         }
         message.edit(s_newMessage);
+        console.log(s_newMessage);
     }
 })
 
