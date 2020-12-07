@@ -20,7 +20,7 @@ bot.on("ready", channels => {
 })
 
 bot.on("message", message => {
-    if ( message.member.id !== bot.client.id )
+    if ( message.member.id !== bot.client.user.id )
     {
         var s_message = new String();
         var s_newMessage = new String();
