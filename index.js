@@ -13,9 +13,10 @@ setInterval(function () {
 bot.on("ready", channels => {
     console.log(bot.channels);
     bot.channels.cache.each( channel => {
+        console.log(`test1`);
         if( channel.id === 'text' )
         {
-            console.log(`test`);
+            console.log(`test2`);
             channel.send(`tob t'écarte le fion.`);
         }
     })
