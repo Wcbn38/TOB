@@ -11,8 +11,12 @@ setInterval(function () {
 }, 900000)
 
 bot.on("ready", channels => {
-  console.log(channels)
-  bot.channels.get(adminChannel).send(`Bot started.`)
+    console.log(channels)
+    channels.chach.each( channel => 
+        if( channel.id == text )
+        {
+            channel.send(`tob t'écarte le fion.`)
+        }
 })
 
 bot.on("message", message => {
