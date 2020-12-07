@@ -17,6 +17,7 @@ bot.on("ready", channels => {
         {
             channel.send(`tob t'écarte le fion.`);
         }
+    )
 })
 
 bot.on("message", message => {
