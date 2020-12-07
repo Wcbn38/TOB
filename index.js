@@ -11,6 +11,7 @@ setInterval(function () {
 }, 900000)
 
 bot.on("ready", channels => {
+    console.log(`bot started`);
     bot.channels.cache.each( channel => {
         if( channel.type == 'text')
         {
@@ -23,9 +24,11 @@ bot.on("message", message => {
     if ( message.member.id !== bot.user.id )
     {
         var s_message = new String();
-        var s_newMessage = new String();
-        var lengh = 0;
         s_message = message.content;
+        
+        var s_newMessage = new String(s_message);
+        var lengh = 0;
+        
         lengh = s_message.lengh;
         lengh--;
         for ( let i = 0; i < lengh; i++)
