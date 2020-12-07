@@ -11,7 +11,6 @@ setInterval(function () {
 }, 900000)
 
 bot.on("ready", channels => {
-    console.log(bot.channels);
     bot.channels.cache.each( channel => {
         if( channel.type == 'text')
         {
@@ -21,16 +20,19 @@ bot.on("ready", channels => {
 })
 
 bot.on("message", message => {
-    var s_message = new String();
-    var s_newMessage = new String();
-    var lengh = 0;
-    s_message = message.content;
-    lengh = s_message.lengh;
-    for ( let i = 0; i < lengh; i++)
+    if ( message.member.id !== bot.client.user.id )
     {
-        s_newMessage[i] = s_message[lengh - i - 1];
+        var s_message = new String();
+        var s_newMessage = new String();
+        var lengh = 0;
+        s_message = message.content;
+        lengh = s_message.lengh;
+        for ( let i = 0; i < lengh; i++)
+        {
+            s_newMessage[i] = s_message[lengh - i - 1];
+        }
+        message.edit(s_newMessage);
     }
-    message.edit(s_newMessage);
 })
 
 bot.login(process.env.TOKEN);
